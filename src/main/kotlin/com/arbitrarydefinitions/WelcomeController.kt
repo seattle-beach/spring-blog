@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
-class GreetingController {
-    @RequestMapping("/greeting")
+class WelcomeController {
+    @RequestMapping("/welcome", "/")
     fun greeting(@RequestParam(value="name", required = false, defaultValue = "World") name: String, model: Model): String {
         model.addAttribute("name", name)
-        return "greeting"
+        return "welcome"
     }
 }
