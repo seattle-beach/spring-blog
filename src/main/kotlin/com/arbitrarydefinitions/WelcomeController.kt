@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam
 
 @Controller
 class WelcomeController {
-    @RequestMapping("/welcome", "/")
-    fun greeting(@RequestParam(value="name", required = false, defaultValue = "World") name: String, model: Model): String {
+    @RequestMapping("/welcome")
+    fun welcome(@RequestParam(value="name", required = false, defaultValue = "World") name: String, model: Model): String {
         model.addAttribute("name", name)
         return "welcome"
     }
