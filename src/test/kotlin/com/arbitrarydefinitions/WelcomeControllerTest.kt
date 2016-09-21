@@ -22,9 +22,16 @@ class WelcomeControllerTest {
     lateinit var controller: WelcomeController
 
     @Test
-    fun welcomeShouldReturnSomething() {
+    fun welcomeShouldHaveDefaultName() {
         this.mockMvc.perform(get("/welcome"))
                 .andExpect(status().isOk)
                 .andExpect(content().string(containsString("Hello, World!")))
+    }
+
+    @Test
+    fun welcomeShouldRespectName() {
+        this.mockMvc.perform(get("/welcome?name=Gregg"))
+                .andExpect(status().isOk)
+                .andExpect(content().string(containsString("Hello, Gregg!")))
     }
 }
