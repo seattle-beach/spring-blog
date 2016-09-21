@@ -13,25 +13,18 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @RunWith(SpringRunner::class)
-@WebMvcTest(WelcomeController::class)
-class WelcomeControllerTest {
+@WebMvcTest(ArticleController::class)
+class ArticleControllerTest {
     @Autowired
     lateinit var mockMvc: MockMvc
 
     @InjectMocks
-    lateinit var controller: WelcomeController
+    lateinit var controller: ArticleController
 
     @Test
-    fun welcomeShouldHaveDefaultName() {
-        this.mockMvc.perform(get("/welcome"))
+    fun newShouldDoStuff() {
+        this.mockMvc.perform(get("/articles/new"))
                 .andExpect(status().isOk)
-                .andExpect(content().string(containsString("Hello, World!")))
-    }
-
-    @Test
-    fun welcomeShouldRespectName() {
-        this.mockMvc.perform(get("/welcome?name=Gregg"))
-                .andExpect(status().isOk)
-                .andExpect(content().string(containsString("Hello, Gregg!")))
+                .andExpect(content().string(containsString("New Article")))
     }
 }
