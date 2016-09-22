@@ -1,1 +1,15 @@
-<h1>omg!</h1>
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p>
+    <strong>Title:</strong>
+    <span th:text="${article.title}">title</span>
+</p>
+
+<p>
+    <strong>Text:</strong>
+    <span th:text="${article.text}">text</span>
+</p>
+</body>
+</html>
