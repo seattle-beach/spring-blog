@@ -1,4 +1,4 @@
-package com.arbitrarydefinitions
+package com.seattlebeach
 
 import org.junit.Test
 import org.junit.runner.RunWith

@@ -1,4 +1,4 @@
-package com.arbitrarydefinitions
+package com.seattlebeach
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller

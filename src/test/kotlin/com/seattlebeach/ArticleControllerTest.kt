@@ -1,4 +1,4 @@
-package com.arbitrarydefinitions
+package com.seattlebeach
 
 import org.hamcrest.Matchers.containsString
 import org.junit.Test

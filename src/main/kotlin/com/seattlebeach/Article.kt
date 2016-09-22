@@ -1,4 +1,4 @@
-package com.arbitrarydefinitions
+package com.seattlebeach
 
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate

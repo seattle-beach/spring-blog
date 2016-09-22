@@ -1,4 +1,4 @@
-package com.arbitrarydefinitions
+package com.seattlebeach
 
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
