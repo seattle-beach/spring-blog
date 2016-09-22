@@ -1,16 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
 <h1>New Article</h1>
+<form action="#" th:action="@{/articles}" th:object="${article}" method="post">
+    <p>
+    <label for="title">Title</label>
+    <br />
+    <input type="text" th:field="*{title}" />
+    </p>
+
+    <p>
+    <label for="text">Text</label>
+    <br />
+    <textarea th:field="*{text}" />
+    </p>
+
+    <p>
+        <input type="submit" />
+    </p>
+</form>
+</body>
+</html>
+
+<!--
 <form method="post" action="/articles/">
     <p>
-        <label for="title">Title</label>
-        <br />
         <input type="text" id="title"/>
     </p>
     <p>
-        <label for="text">Text</label>
-        <br />
         <textarea id="text"/>
     </p>
     <p>
         <input type="submit" />
     </p>
 </form>
+-->
