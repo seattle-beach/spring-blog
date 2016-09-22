@@ -23,6 +23,12 @@ class ArticleController {
         return "articles/new"
     }
 
+    @RequestMapping
+    fun index(model: Model): String {
+        model.addAttribute("articles", repository.findAll())
+        return "articles/index"
+    }
+
     @RequestMapping(method = arrayOf(RequestMethod.POST))
     fun create(article: Article): String {
         repository.save(article)
